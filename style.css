@@ -200,7 +200,10 @@ a {
 }
 .item_2 {
     background-color: #F7E4E2;
+}
+.image_2 {
     margin: 0 30%;
+    height: 420px;
 }
 
 .link__to__catalog {
