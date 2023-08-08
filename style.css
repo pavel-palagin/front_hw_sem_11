@@ -44,8 +44,13 @@ img {
     padding-right: calc(50% - 800px);
 }
 
-.main__block__image{
-    margin-right: 63px;
+.info__title{
+    padding-left: 63px;
+}
+.info__content {
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
+    margin-top: 48%;
 }
 .ractangle {
     width: 12px;
@@ -230,7 +235,8 @@ img {
     width: 212px;
     }
 
-
+/* Планшетная версия */
+    
 @media (min-width: 768px) and (max-width: 1024px) {
     .main__block {
         padding-left: calc(50% - 364px);
@@ -238,7 +244,10 @@ img {
     }
     .main__block__image {
         max-width: 50%;
-        margin-right: 39px;
+    
+    }
+    .info__title{
+        padding-left: 39px;
     }
     .heading {
         font-size: 44px;
@@ -262,6 +271,59 @@ img {
         grid-template-columns: repeat(2, 360px);
         justify-content: center;
         gap: 16px;
+    }
+}
+
+/* Мобильная версия */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .main__block__image {
+        display: none;
+    }
+    .info__title {
+        display: flex;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .info__content {
+        margin-top: 0;
+        
+    }
+
+    .heading {
+        margin-top: 0;
+        font-size: 38px;
+    }
+    .of_luxerious {
+        font-size: 20px;
+    }
+    .fashion {
+        font-size: 20px;
+    }
+    
+    .catalog__range {
+        padding-bottom: 109px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 32px;
+        padding-left: calc(50% - 171px);
+        padding-right: calc(50% - 171px);
+    }
+
+    .sale__info__big{
+        display: flex;
+        min-height: 111px;
+    }
+
+    .catalog__items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        gap: 17px;
+    }
+    .items{
+        padding-left: calc(50% - 180px);
+        padding-right: calc(50% - 180px);
     }
 
 
