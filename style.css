@@ -116,6 +116,8 @@
   position: relative;
   background: #fff;
   z-index: 1;
+  margin-bottom: 130px;
+  border: 1px solid #EAEAEA;
 }
 .collection__subtitle {
   margin-top: 64px;
@@ -192,6 +194,7 @@
   justify-content: center;
   gap: 22px;
   color: #F16D7F;
+  margin-bottom: 64px;
 }
 
 .catalog__items__product {
