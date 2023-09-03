@@ -1,6 +1,9 @@
+@import 'normalize';
+@import 'mixins';
 @import 'fonts';
 @import 'animation';
-@import 'product';
+@import '../seminar_11/product/product';
+@import '../seminar_11/catalog/catalog';
 
 
 * {
@@ -32,16 +35,18 @@ img {
     align-items: center;
     justify-content: space-around;
     gap: 859px;
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
+    @include center;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 18px;
+    }
+
 }
 
-.left__edge {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top: 18px;
-}
+
 
 .logo__link {
     width: 44px;
@@ -61,17 +66,6 @@ img {
 
 .link__cart {
     position: relative;
-}
-
-.count {
-    position: absolute;
-    color: #FFF;
-    background-color: #F16D7F;
-    width: 19px;
-    border-radius: 50%;
-    text-align: center;
-    margin-left: 20px;
-    margin-top: -15px;
 }
 
 .header__checkbox {
@@ -123,7 +117,7 @@ img {
     }
 
     &__link:hover {
-        color: #F16D7F;
+        color: $colorMain;
     }
 
     &__title {
@@ -131,7 +125,7 @@ img {
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
-        color: #F16D7F;
+        color: $colorMain;
     }
 
     &__list {
@@ -171,14 +165,14 @@ img {
     align-items: center;
 }
 .info__content {
-    border-left: 12px solid #F16D7F;
+    border-left: 12px solid $colorMain;
     padding-left: 16px;
     height: 92px;
 }
 .ractangle {
     width: 12px;
     height: 92px;
-    background-color: #F16D7F;
+    background-color: $colorMain;
     margin-right: 16px;
 }
 .heading {
@@ -198,7 +192,7 @@ img {
     line-height: normal;
 }
 .fashion {
-    color: #F16D7F;
+    color: $colorMain;
     font-family: Lato;
     font-size: 32px;
     font-style: normal;
@@ -213,8 +207,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 30px;
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
+    @include center;
 }
 
 .sale__info {
@@ -254,7 +247,7 @@ img {
 .sale__title {
     display: flex;
     justify-content: center;
-    color: #F16D7F;
+    color: $colorMain;
     font-family: Lato;
     font-size: 24px;
     font-style: normal;
@@ -334,7 +327,7 @@ img {
 }
 
 .product__add:hover svg path {
-    fill: #F16D7F;
+    fill: $colorMain;
 }
 
 .discription {
@@ -362,7 +355,7 @@ img {
     }
 .price {
     padding-bottom: 24px;
-    color: #F16D7F;
+    color: $colorMain;
     font-family: Lato;
     font-size: 16px;
     font-style: normal;
@@ -380,9 +373,9 @@ img {
 .all__product {
     
     padding: 15px;
-    border: 1px solid #FF6A6A;
+    border: 1px solid $colorMain;
     text-align: center;
-    color: #F26376;
+    color: $colorMain;
     font-family: Lato;
     font-size: 16px;
     font-style: normal;
@@ -391,7 +384,7 @@ img {
     width: 212px;
 }
 .link__to__catalog:hover .all__product {
-    background-color: #F16D7F;
+    background-color: $colorMain;
     color: #fff;
 }
 
@@ -530,7 +523,7 @@ img {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    background-color: #F16D7F;
+    background-color: $colorMain;
     cursor: pointer;
     transition: 0.7s;
 }
@@ -538,8 +531,8 @@ img {
 .button__feedback:hover {
     
     background-color:#fff;
-    color: #F16D7F;
-    border: 1px solid #F16D7F;
+    color: $colorMain;
+    border: 1px solid $colorMain;
 }
 
 
@@ -574,7 +567,7 @@ img {
 }
 
 .social__link:hover {
-    background-color: #F16D7F;
+    background-color: $colorMain;
 }
 .social__link:hover path{
     fill: #fff;

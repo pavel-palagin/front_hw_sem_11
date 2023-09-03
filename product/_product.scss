@@ -1,3 +1,5 @@
+@import '../mixins';
+
 .productPage {
     position: relative;
     overflow: hidden;
@@ -5,8 +7,7 @@
 
 
 .top__head {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
+    @include center;
     background-color: #F8F3F4;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -15,7 +16,7 @@
     justify-content: space-between;
 
     &__directory {
-        color: #F16D7F;
+        color: $colorMain;
         font-family: Lato;
         font-size: 24px;
         font-style: normal;
@@ -33,7 +34,7 @@
     }
 
     &__breadcrumbs__link__site {
-        color: #F16D7F;
+        color: $colorMain;
         font-family: Lato;
         font-size: 14px;
         font-style: normal;
@@ -66,11 +67,11 @@
     }
 
     &__control__prev:hover .arrow {
-        fill: #F16D7F;
+        fill: $colorMain;
     }
 
     &__control__next:hover .arrow {
-        fill: #F16D7F;
+        fill: $colorMain;
     }
 
 }
@@ -92,7 +93,7 @@
     &__subtitle {
         margin-top: 64px;
         margin-bottom: 12px;
-        color: #F16D7F;
+        color: $colorMain;
         font-family: Lato;
         font-size: 14px;
         font-style: normal;
@@ -103,7 +104,7 @@
     &__subtitle__border {
         width: 63px;
         height: 3px;
-        background-color: #F16D7F;
+        background-color: $colorMain;
         margin-bottom: 12px;
     }
 
@@ -130,7 +131,7 @@
     }
 
     &__price {
-        color: #EF5B70;
+        color: $colorMain;
         font-family: Lato;
         font-size: 24px;
         font-style: normal;
@@ -165,7 +166,7 @@
 
     &__product__add {
         display: flex;
-        border: 1px solid #F16D7F;
+        border: 1px solid $colorMain;
         width: 200px;
         height: 50px;
         font-style: normal;
@@ -175,7 +176,7 @@
         align-items: center;
         justify-content: center;
         gap: 22px;
-        color: #F16D7F;
+        color: $colorMain;
         margin-bottom: 64px;
     }
 }

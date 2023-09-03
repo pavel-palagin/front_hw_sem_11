@@ -1,0 +1,232 @@
+@import '../mixins';
+
+
+summary {
+    display: block;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+
+.filter__sort {
+    height: 132px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 390px;
+    @include center;
+}
+
+.filter {
+
+    &__lists {
+        padding: 13px 16px 16px;
+        width: 360px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 44px;
+        z-index: 1;
+    
+        &[open] {
+            background: #FFF;
+            box-shadow: 6px 4px 35px rgba(0,0,0,0.21);
+        }
+    
+        &[open] .summary__text {
+            color: $colorMain;
+        }
+        &[open] path {
+            fill: $colorMain;
+        }
+    
+        &__summary {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 16px;
+            color: #000;
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+    &__content {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &__units {
+            
+            &__summary {
+                color: #6F6E6E;
+                font-family: Lato;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 17px;
+                padding: 8px 11px 11px;
+                border-left: 5px solid $colorMain;
+                border-bottom: 1px solid #EBEBEB;
+            }
+    
+            &[open] &__summary {
+                color: $colorMain;
+            }
+        }
+
+        &__link-box {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            margin-left: 18px;
+        }
+
+        &__link {
+            color: #6F6E6E;
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+        }
+    }
+
+}
+
+.sort {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+
+
+    &__check__summary {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        position: relative;
+        color: #6F6E6E;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__box {
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding: 9px 30px 12px 9px;
+        position: absolute;
+
+        &__choice {
+            display: flex;
+            gap: 9px;
+        }
+    }
+
+}
+
+
+.catalog__product {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 188px;
+
+    &__items {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        height: 420px;
+        
+    }
+
+    &__discription {
+        padding-left: 18px;
+        padding-top: 24px;
+        background-color: #F8F8F8;
+    }
+    &__subtitle {
+        color: #000;
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__desc {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        color: #5D5D5D;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        }
+    &__price {
+        padding-bottom: 24px;
+        color: $colorMain;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+
+}
+
+
+
+.catalog__product__items:hover .catalog__product__image {
+    filter: brightness(0.5);
+
+}
+
+.catalog__product__items:hover .product__add {
+    display: flex;
+}
+
+.product__add {
+    position: absolute;
+    top: 188px;
+    left: 111px;
+    border: 1px solid #fff;
+    width: 139px;
+    height: 44px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    color: #FFFFFF;
+    animation: scale-up-ver-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.product__add:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+.product__add:hover svg path {
+    fill: $colorMain;
+}
+
+
+
+
