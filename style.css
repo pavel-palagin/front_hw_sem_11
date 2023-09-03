@@ -622,6 +622,7 @@ summary::-webkit-details-marker {
   box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
   padding: 9px 30px 12px 9px;
   position: absolute;
+  z-index: 1;
 }
 .sort__box__choice {
   display: flex;
