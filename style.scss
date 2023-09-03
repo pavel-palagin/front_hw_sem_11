@@ -24,8 +24,7 @@ img {
 }
 
 .page {
-    position: relative;
-    overflow: hidden;
+    @include hidden;
 }
   
 

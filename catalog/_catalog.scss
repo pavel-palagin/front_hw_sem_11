@@ -1,5 +1,8 @@
 @import '../mixins';
 
+.catalogPage {
+    @include hidden;
+}
 
 summary {
     display: block;

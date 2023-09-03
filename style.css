@@ -516,6 +516,11 @@ template {
   gap: 30px;
 }
 
+.catalogPage {
+  position: relative;
+  overflow: hidden;
+}
+
 summary {
   display: block;
 }

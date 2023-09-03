@@ -1,8 +1,7 @@
 @import '../mixins';
 
 .productPage {
-    position: relative;
-    overflow: hidden;
+    @include hidden;
 }
 
 
