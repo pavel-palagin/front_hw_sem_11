@@ -30,15 +30,19 @@
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-    }
 
-    &__breadcrumbs__link__site {
-        color: $colorMain;
-        font-family: Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        &:not(:last-child)::after {
+            padding: 0 5px;
+            content: '/';
+        }
+        &:last-child {
+            color: $colorMain;
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
     }
 }
 

@@ -4,6 +4,7 @@
 @import 'animation';
 @import '../seminar_11/product/product';
 @import '../seminar_11/catalog/catalog';
+@import '../seminar_11/cart/cart';
 
 
 * {
@@ -428,23 +429,28 @@ img {
 }
 
 .feedback {
-    position: relative;
+    background-image: url(/images/section_feedback/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.back__feedback {
-    height: 100%;
-    width: 100%;
+// .back__feedback {
+//     height: 100%;
+//     width: 100%;
 
-}
+// }
 
 .content__feedback {
-    position: absolute;
+    // position: absolute;
     display: grid;
     grid-template-columns: repeat(2, 360px);
     gap: 350px;
     align-items: center;
+    padding-top: 97px;
+    padding-bottom: 128px;
 }
 .appeal {
     display: flex;
@@ -536,6 +542,7 @@ img {
 
 
 .footer {
+    @include center;
     display: flex;
     background-color: #222224;
     align-items: center;
