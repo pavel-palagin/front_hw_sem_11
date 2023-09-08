@@ -742,7 +742,7 @@ summary::-webkit-details-marker {
   margin-top: 96px;
   display: flex;
   flex-direction: row;
-  gap: 128px;
+  justify-content: space-between;
   justify-content: center;
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
