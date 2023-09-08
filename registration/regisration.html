@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart page</title>
+    <title>Registration form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -13,8 +13,7 @@
     <script src="https://kit.fontawesome.com/45e39c8863.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <div class="cartPage">
+    <div class="registrationPage">
 
         <header class="header">
             <div class="header__left">
@@ -75,88 +74,50 @@
             </div>
         </header>
         <div class="top__head">
-            <h2 class="top__head__directory">SHOPPING CART</h2>
+            <h2 class="top__head__directory">REGISTRATION</h2>
         </div>
         
-        <section class="cart__content">
-            <div class="cart__product">
-                <div class="product">
-                    <img src="../images/cart/1.png" alt="" class="product__image">
-                    
-                    <div class="product__description">
-                        <h3 class="product__title">MANGO PEOPLE<br>T-SHIRT</h3>
-                        <p class="product__info">Price:<span class="product__info_price">$300</span></p>
-                        <p class="product__info">Color:<span class="product__info_color">Red</span></p>
-                        <p class="product__info">Size:<span class="product__info_size">XL</span></p>
-                        <form class="product__count">
-                            <!-- <p class="product__info">Quantity:</p>
-                                <input type="number" name="count" id=""> -->
-                            <label class="product__info" for="count">Quantity:</label>
-                            <input class="product__info_quantity" type="number" id="count" placeholder="1" name="" min="1"/>
-                        </form>
-                        
+        <section class="registration">
+            
+                <form class="registration-form" action="">
+                    <h3 class="registration-form__subtitle">Your Name</h3>
+
+                    <input class="registration-form__fields" type="text" id="f_name" name="" placeholder="First Name"/>
+                    <input class="registration-form__fields" type="text" id="l_name" name="" placeholder="Last Name"/>
+
+                    <div class="registration-form__check">
+                        <input class="registration-form__input" type="radio" name="radioCheck" id="male">
+                        <label class="registration-form__label" for="male">Male</label>
+
+                        <input class="registration-form__input" type="radio" name="radioCheck" id="female" checked>
+                        <label class="registration-form__label" for="female">Female</label>
                     </div>
 
-                    <i class="fa fa-solid fa-xmark fa-xl product_close"></i>
+                    <h3 class="registration-form__subtitle">Login details</h3>
+                    <input class="registration-form__fields" type="email" id="email" name="" placeholder="Email"/>
+                    <input class="registration-form__fields" type="password" id="email" name="" placeholder="Password"/>
+                    <p class="registration-form__text">Please use 8&nbsp;or more characters, with at&nbsp;least 1&nbsp;number and a&nbsp;mixture of&nbsp;uppercase and lowercase letters</p>
+                    <button class="registration-form__button">
+                        <span class="registration-form__button_text">JOIN NOW</span>
+                        <i class="fa fa-solid fa-arrow-right-long form__button_arrow"></i>
+                    </button>
+                </form>
 
 
+            <div class="loyalty">
+                <h2 class="loyalty__title">LOYALTY HAS ITS PERKS</h2>
+                <p class="loyalty__text">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
+                <ul class="loyalty__ul">
+                    <li class="loyalty__ul_list"><i class="fa-solid fa-check fa-xs loyalty__ul_list_tick"></i>15% off welcome offer</li>
+                    <li class="loyalty__ul_list"><i class="fa-solid fa-check fa-xs loyalty__ul_list_tick"></i>Free shipping, returns and exchanges on all orders</li>
+                    <li class="loyalty__ul_list"><i class="fa-solid fa-check fa-xs loyalty__ul_list_tick"></i>$10 off a purchase on your birthday</li>
+                    <li class="loyalty__ul_list"><i class="fa-solid fa-check fa-xs loyalty__ul_list_tick"></i>Early access to products</li>
+                    <li class="loyalty__ul_list"><i class="fa-solid fa-check fa-xs loyalty__ul_list_tick"></i>Exclusive offers & rewards</li>
+                </ul>
 
-                    <!-- <svg class="product_close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path class="product_close-path"  d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" fill="#575757"/>
-                      </svg> -->
-                </div>
                 
-                <div class="product">
-                    <img src="../images/cart/2.png" alt="" class="product__image">
-                    <div class="product__description">
-                        <h3 class="product__title">MANGO PEOPLE<br>T-SHIRT</h3>
-                        <p class="product__info">Price:<span class="product__info_price">$300</span></p>
-                        <p class="product__info">Color:<span class="product__info_color">Red</span></p>
-                        <p class="product__info">Size:<span class="product__info_size">XL</span></p>
-                        <form class="product__count">
-                            <!-- <p class="product__info">Quantity:</p>
-                            <input type="number" name="count" id=""> -->
-                            <label class="product__info" for="count">Quantity:</label>
-                            <input class="product__info_quantity" type="number" id="count" placeholder="1" name="" min="1" />
-                        </form>
-                    </div>
-
-                    <i class="fa fa-solid fa-xmark fa-xl product_close"></i>
-
-                    <!-- <svg class="product_close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path  d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" fill="#575757"/>
-                      </svg> -->
-
-                </div>
             </div>
 
-            <div class="cart__order">
-                <div class="order">
-                    <p class="order__title">SHIPPING ADRESS</p>
-    
-                    <form class="order__form">
-                        <!-- <label for=""></label> -->
-                        <input class="order__form_enter" id="country" name="" placeholder="Bangladesh"/>
-                        <input class="order__form_enter" id="state" name="" placeholder="State"/>
-                        <input class="order__form_enter" id="postcode" name="" placeholder="Postcode / Zip"/>
-    
-                        <button class="order__form_link">GET A QUOTE</button>
-                      </form>
-                </div>
-    
-    
-                <div class="order__total">
-                    <p class="order__total_sub">SUB TOTAL $900</p>
-                    <p class="order__total_grand">GRAND TOTAL<span class="order__total_price">$900</span></p>
-                    <p class="order__total_hr"></p>
-                    <button class="order__total_check">PROCEED TO CHECKOUT</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="cart__action">
-            <button class="cart__action_btn">CLEAR SHOPPING CART</button>
-            <button class="cart__action_btn">CONTINUE SHOPPING</button>
         </section>
         
         <section class="feedback">

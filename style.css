@@ -738,6 +738,11 @@ summary::-webkit-details-marker {
   fill: #F16D7F;
 }
 
+.cartPage {
+  position: relative;
+  overflow: hidden;
+}
+
 .cart__content {
   margin-top: 96px;
   display: flex;
@@ -970,6 +975,146 @@ summary::-webkit-details-marker {
 }
 .cart__action_btn:hover {
   box-shadow: 0 0 5px #F16D7F;
+}
+
+.registrationPage {
+  position: relative;
+  overflow: hidden;
+}
+
+.registration {
+  display: flex;
+  justify-content: space-between;
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+  margin-top: 64px;
+  margin-bottom: 96px;
+}
+
+.registration-form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.registration-form__subtitle {
+  color: #222;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration-form__fields {
+  padding-top: 13px;
+  padding-bottom: 16px;
+  padding-left: 17px;
+  border: 1px solid #A4A4A4;
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration-form__check {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+.registration-form__input {
+  margin-left: 10px;
+}
+.registration-form__label {
+  color: #000;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration-form__text {
+  margin-top: -5px;
+  margin-bottom: 18px;
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration-form__button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 167px;
+  padding-left: 29px;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  background-color: #F16D7F;
+  color: #fff;
+  border: 1px solid transparent;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.7s;
+}
+.registration-form__button_arrow {
+  color: #ffffff;
+}
+.registration-form__button:hover {
+  color: #F16D7F;
+  background-color: #fff;
+  border: 1px solid #F16D7F;
+}
+
+.loyalty {
+  width: 652px;
+}
+.loyalty__title {
+  color: #000;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+.loyalty__text {
+  color: #000;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+.loyalty__ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.loyalty__ul_list {
+  list-style-type: none;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.loyalty__ul_list_tick {
+  color: #000000;
+  padding-right: 23px;
+}
+.loyalty__ul_list_tick:hover {
+  color: #F16D7F;
+}
+.loyalty__ul_list:hover {
+  color: #F16D7F;
 }
 
 * {

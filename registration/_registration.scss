@@ -1,0 +1,162 @@
+@import '../vars';
+@import '../mixins';
+
+.registrationPage {
+    @include hidden;
+}
+
+.registration {
+    display: flex;
+    justify-content: space-between;
+    @include center;
+    margin-top: 64px;
+    margin-bottom: 96px;
+}
+
+.registration-form {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+
+    &__subtitle {
+        color: #222;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__fields {
+        padding-top: 13px;
+        padding-bottom: 16px;
+        padding-left: 17px;
+        border: 1px solid #A4A4A4;
+        color: #B1B1B1;
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__check{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    &__input {
+        margin-left: 10px;
+    }
+
+    &__label {
+        color: #000;
+        font-family: Lato;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+
+    &__text {
+        margin-top: -5px;
+        margin-bottom: 18px;
+        color: #B1B1B1;
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 167px;
+        padding-left: 29px;
+        padding-top: 16px;
+        padding-bottom: 17px;
+        background-color: $colorMain;
+        color: #fff;
+        border: 1px solid transparent;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.7s;
+
+        &_arrow {
+            color: #ffffff;
+        }
+    }
+    &__button:hover {
+        color: $colorMain;
+        background-color: #fff;
+        border: 1px solid $colorMain;
+
+    }
+    
+}
+
+.loyalty {
+    width: 652px;
+
+    &__title {
+        color: #000;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 22px;
+    }
+
+    &__text {
+        color: #000;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 22px;
+    }
+
+    &__ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &_list {
+            list-style-type: none;
+            font-family: Lato;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+
+            &_tick {
+                color: #000000;
+                padding-right: 23px;
+            }
+            &_tick:hover {
+                color: $colorMain;
+            }
+
+        }
+        &_list:hover {
+            color: $colorMain;
+        }
+
+    }
+
+
+
+
+}

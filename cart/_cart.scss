@@ -1,4 +1,9 @@
 @import '../vars';
+@import '../mixins';
+
+.cartPage {
+    @include hidden;
+}
 
 
 
