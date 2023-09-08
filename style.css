@@ -785,6 +785,30 @@ summary::-webkit-details-marker {
   margin: 0;
   padding: 0;
 }
+.product__info_price {
+  color: #EF5B70;
+  font-family: Lato;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product__info_color {
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product__info_size {
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .product__info_quantity {
   width: 44px;
   height: 25px;
