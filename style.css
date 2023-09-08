@@ -818,6 +818,9 @@ summary::-webkit-details-marker {
   margin-top: 28px;
   margin-right: 22px;
 }
+.product_close:hover {
+  color: #F16D7F;
+}
 
 .cart__order {
   display: flex;

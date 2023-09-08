@@ -92,8 +92,11 @@
     &_close {
         margin-top: 28px;
         margin-right: 22px
-
     }
+    &_close:hover {
+        color: $colorMain;
+    }
+
 }
 
 .cart__order {
