@@ -743,7 +743,6 @@ summary::-webkit-details-marker {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  justify-content: center;
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
 }
