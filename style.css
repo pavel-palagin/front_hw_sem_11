@@ -756,7 +756,7 @@ summary::-webkit-details-marker {
 .product {
   display: flex;
   gap: 30px;
-  box-shadow: 10px 10px 10px #F5F3F3;
+  box-shadow: 25px 25px 15px #F5F3F3;
 }
 .product__description {
   display: flex;
@@ -785,7 +785,7 @@ summary::-webkit-details-marker {
   padding: 0;
 }
 .product__info_price {
-  color: #EF5B70;
+  color: #F16D7F;
   font-family: Lato;
   font-size: 22px;
   font-style: normal;
@@ -817,6 +817,7 @@ summary::-webkit-details-marker {
 .product_close {
   margin-top: 28px;
   margin-right: 22px;
+  color: #575757;
 }
 .product_close:hover {
   color: #F16D7F;
@@ -858,7 +859,7 @@ summary::-webkit-details-marker {
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 15px;
+  background-color: #fff;
   width: 100px;
   border: 1px solid rgb(164, 164, 164);
   color: #4A4A4A;
@@ -952,7 +953,7 @@ summary::-webkit-details-marker {
 .cart__action_clear:hover {
   box-shadow: 0 0 5px #F16D7F;
 }
-.cart__action_continue {
+.cart__action_btn {
   width: 235px;
   border: 1px solid rgb(164, 164, 164);
   padding-top: 15px;
@@ -967,7 +968,7 @@ summary::-webkit-details-marker {
   line-height: normal;
   transition: 0.5s;
 }
-.cart__action_continue:hover {
+.cart__action_btn:hover {
   box-shadow: 0 0 5px #F16D7F;
 }
 
