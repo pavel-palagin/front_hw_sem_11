@@ -383,6 +383,7 @@ img {
     font-weight: 400;
     line-height: normal;
     width: 212px;
+    transition: 0.7s;
 }
 .link__to__catalog:hover .all__product {
     background-color: $colorMain;

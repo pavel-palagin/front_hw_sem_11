@@ -31,12 +31,13 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
-        width: 330px;
+        width: 290px;
         height: 306px;
-        padding-top: 22px;
+        
     }
 
     &__title {
+        padding-top: 22px;
         color: #222;
         font-family: Lato;
         font-size: 24px;
@@ -95,16 +96,17 @@
     }
 
     &_close {
-
-        margin-top: 28px;
-        margin-right: 22px;
+        padding-top: 37px;
+        padding-right: 22px;
         color: #575757;
+        cursor: pointer;
     }
     &_close:hover {
         color: $colorMain;
     }
 
 }
+
 
 .cart__order {
     display: flex;
@@ -227,30 +229,8 @@
     margin-bottom: 128px;
     @include center;
 
-    &_clear {
-        width: 235px;
-        border: 1px solid rgba(164, 164, 164, 1);
-        padding-top: 15px;
-        padding-bottom: 16px;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 1);
-        color: #000;
-        font-family: Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        transition: 0.5s;
-        // animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-    &_clear:hover {
-        box-shadow: 0 0 5px $colorMain;
-    }
-    
-    
-
     &_btn {
-        width: 235px;
+        width: 230px;
         border: 1px solid rgba(164, 164, 164, 1);
         padding-top: 15px;
         padding-bottom: 16px;
@@ -265,7 +245,9 @@
         transition: 0.5s;
     }
     &_btn:hover {
-        box-shadow: 0 0 5px $colorMain;
+        background-color: $colorMain;
+        color: #FFF;
+        border: 1px solid $colorMain;
     }
 
 }
