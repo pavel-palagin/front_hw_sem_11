@@ -434,9 +434,9 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     // position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
 }
 // .back__feedback {
 //     height: 100%;
@@ -446,9 +446,9 @@ img {
 
 .content__feedback {
     // position: absolute;
-    display: grid;
-    grid-template-columns: repeat(2, 360px);
-    gap: 350px;
+    display: flex;
+    @include center;
+    justify-content: space-between;
     align-items: center;
     padding-top: 97px;
     padding-bottom: 128px;
@@ -502,6 +502,7 @@ img {
 }
 .form {
     display: flex;
+    justify-content: center;
     height: 50px;
     width: 360px;
 

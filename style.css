@@ -1532,15 +1532,13 @@ img {
   background-image: url(/images/section_feedback/back.png);
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .content__feedback {
-  display: grid;
-  grid-template-columns: repeat(2, 360px);
-  gap: 350px;
+  display: flex;
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+  justify-content: space-between;
   align-items: center;
   padding-top: 97px;
   padding-bottom: 128px;
@@ -1600,6 +1598,7 @@ img {
 
 .form {
   display: flex;
+  justify-content: center;
   height: 50px;
   width: 360px;
 }
