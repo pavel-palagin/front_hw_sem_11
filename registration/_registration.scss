@@ -134,6 +134,8 @@
         gap: 16px;
 
         &_list {
+            display: flex;
+            gap: 23px;
             list-style-type: none;
             font-family: Lato;
             font-size: 24px;
@@ -143,7 +145,6 @@
 
             &_tick {
                 color: #000000;
-                padding-right: 23px;
             }
             &_tick:hover {
                 color: $colorMain;
