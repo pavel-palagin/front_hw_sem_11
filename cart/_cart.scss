@@ -23,6 +23,7 @@
 }
 
 .product {
+    position: relative;
     display: flex;
     gap: 30px;
     box-shadow: 25px 25px 15px #F5F3F3;
@@ -31,59 +32,38 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
-        width: 290px;
-        height: 306px;
         
     }
 
     &__title {
         padding-top: 22px;
         color: #222;
-        font-family: Lato;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        @include font-style400(24px);
+        margin-bottom: 36px;
 
     }
 
     &__info {
 
         color: #575757;
-        font-family: Lato;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        @include font-style400(22px);
 
         margin: 0;
         padding: 0;
 
         &_price {
             color: $colorMain;
-            font-family: Lato;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            @include font-style400(22px);
 
         }
         &_color {
             color: #6F6E6E;
-            font-family: Lato;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            @include font-style400(22px);
             
         }
         &_size {
             color: #6F6E6E;
-            font-family: Lato;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;	
+            @include font-style400(22px);	
             
         }
         &_quantity {
@@ -96,13 +76,17 @@
     }
 
     &_close {
-        padding-top: 37px;
-        padding-right: 22px;
-        color: #575757;
+        position: absolute;
+        margin-left: 320px;
+        margin-top: 28px;
+    }
+
+    &_close-path {
+        fill: #575757;
         cursor: pointer;
     }
-    &_close:hover {
-        color: $colorMain;
+    &_close-path:hover {
+        fill: $colorMain;
     }
 
 }
@@ -116,6 +100,7 @@
     @include center;
 
     &_btn {
+        text-transform: uppercase;
         width: 230px;
         border: 1px solid rgba(164, 164, 164, 1);
         padding-top: 15px;
@@ -123,11 +108,7 @@
         color: #000;
         text-align: center;
         background-color: rgba(255, 255, 255, 1);
-        font-family: Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include font-style300(14px);
         transition: 0.5s;
     }
     
@@ -154,11 +135,7 @@
 
         &__title {
             color: #222;
-            font-family: Lato;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
+            @include font-style300(16px);
             margin: 0;
         }
 
@@ -176,15 +153,11 @@
 
             &_enter::placeholder {
                 color: #B1B1B1;
-                font-family: Lato;
-                font-size: 13px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-
+                @include font-style300(13px);
               }
 
             &_link {
+                text-transform: uppercase;
                 display: block;
                 padding-top: 10px;
                 padding-bottom: 10px;
@@ -192,11 +165,7 @@
                 width: 100px;
                 border: 1px solid rgba(164, 164, 164, 1);
                 color: #4A4A4A;
-                font-family: Lato;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
+                @include font-style300(11px);
             }
         }
     
@@ -212,20 +181,12 @@
 
             &_sub {
                 color: #4A4A4A;
-                font-family: Lato;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
+                @include font-style300(11px);
                 margin-bottom: 12px;
             }
             &_grand {
                 color: #222;
-                font-family: Lato;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
+                @include font-style300(13px);
                 margin-bottom: 21px;
                 
             }
@@ -236,11 +197,7 @@
             }
             &_price {
                 color: $colorMain;
-                font-family: Lato;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
+                @include font-style700(16px);
 
             }
             &_check{
@@ -250,11 +207,7 @@
                 width: 270px;
                 border: 1px solid transparent;
                 color: #FFF;
-                font-family: Lato;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
+                @include font-style300(16px);
                 transition: 0.7s;
             }
             &_check:hover {
@@ -278,6 +231,7 @@
     .cart__content {
         flex-direction: column;
         @include centerTablet;
+        margin-top: 59px;
         margin-bottom: 62px;
     }
 
@@ -288,9 +242,8 @@
         margin-bottom: 64px;
     }
 
-
     .product_close {
-        padding-left: 84px;
+        margin-left: 400px;
     }
 
     .cart__order {
@@ -302,12 +255,119 @@
     }
     .order {
         padding-top: 0;
+
+        &__form {
+            gap: 15px;
+        }
     }
 
-    .order__form {
-        gap: 15px;
-    }
 }
 
+
+/* Мобильная версия */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .top__head {
+        @include centerMobil;
+        padding-top: 50px;
+        padding-bottom: 69px;
+        justify-content: center;
+    }
+
+    .cart__content {
+        margin-top: 39px;
+        flex-direction: column;
+        @include centerMobil;
+    }
+
+    .cart__product {
+        gap: 32px;
+    }
+
+    .cart__action {
+        margin-top: 0px;
+        gap: 9px;
+        @include centerMobil;
+        margin-bottom: 48px;
+
+        &_btn {
+            text-transform: none;
+            width: 175px;
+            font-size: 12px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+
+        }
+    }
+
+    .product {
+        gap: 17px;
+
+        &__description {
+            gap: 4px;
+
+        }
+
+        &__image {
+            width: 143.859px;
+            height: 188px;
+        }
+        
+        &__title {
+            padding-top: 13px;
+            font-size: 16px;
+            margin-bottom: 22px;
+        }
+        &__info {
+            font-size: 14px;
+
+            &_price {
+                font-size: 14px;
+    
+            }
+            &_color {
+                font-size: 14px;
+                
+            }
+            &_size {
+                font-size: 14px;	
+                
+            }
+            &_quantity {
+                width: 24px;
+                height: 15px;
+                margin-left: 15px;
+            }
+
+            &_quantity::placeholder {
+                font-size: 10px;
+            }
+        }
+
+        &_close {
+            margin-left: 175px;
+            margin-top: 17px;
+            width: 10px;
+            height: 11px;
+        }
+        
+    }
+
+    .cart__order {
+        gap: 48px;
+
+    }
+    .order{
+        padding-top: 0;
+
+        &__form_link {
+            text-transform: none;
+        }
+        &__total {
+            margin-bottom: 96px;
+        }
+    }
+}
 
 

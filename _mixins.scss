@@ -10,10 +10,35 @@
     padding-right: calc(50% - $widthContentTablet/2);
 }
 
-
-
+@mixin centerMobil {
+    padding-left: calc(50% - $widthContentMobil/2);
+    padding-right: calc(50% - $widthContentMobil/2);
+}
 
 @mixin hidden {
     position: relative;
     overflow: hidden;
 }
+
+@mixin font-style700($font-size) {
+    font-family: Lato;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+@mixin font-style400($font-size) {
+    font-family: Lato;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+@mixin font-style300($font-size) {
+    font-family: Lato;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+

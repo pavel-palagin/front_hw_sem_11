@@ -29,7 +29,7 @@ summary {
 
     &__lists {
         padding: 13px 16px 16px 0px;
-        width: 360px;
+        // width: 360px;
         box-sizing: border-box;
         position: absolute;
         top: 44px;
@@ -47,7 +47,7 @@ summary {
             fill: $colorMain;
         }
     
-        &__summary {
+        &_summary {
             display: flex;
             align-items: center;
             gap: 11px;
@@ -62,14 +62,15 @@ summary {
     }
 
     &__content {
+        width: 360px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         gap: 20px;
 
-        &__units {
+        &_units {
             
-            &__summary {
+            &_summary {
                 color: #6F6E6E;
                 font-family: Lato;
                 font-size: 14px;
@@ -81,12 +82,12 @@ summary {
                 border-bottom: 1px solid #EBEBEB;
             }
     
-            &[open] &__summary {
+            &[open] &_summary {
                 color: $colorMain;
             }
         }
 
-        &__link-box {
+        &_link-box {
             margin-top: 25px;
             display: flex;
             flex-direction: column;
@@ -94,7 +95,7 @@ summary {
             margin-left: 18px;
         }
 
-        &__link {
+        &_link {
             color: #6F6E6E;
             font-family: Lato;
             font-size: 14px;
@@ -112,7 +113,7 @@ summary {
     align-items: center;
 
 
-    &__check__summary {
+    &__check_summary {
         display: flex;
         gap: 10px;
         align-items: center;
@@ -132,7 +133,7 @@ summary {
         position: absolute;
         z-index: 1;
 
-        &__choice {
+        &_choice {
             display: flex;
             gap: 9px;
         }
@@ -148,23 +149,23 @@ summary {
     gap: 30px;
     margin-bottom: 48px;
 
-    &__items {
+    &_items {
         position: relative;
         display: flex;
         flex-direction: column;
     }
 
-    &__image {
+    &_image {
         height: 420px;
         
     }
 
-    &__discription {
+    &_discription {
         padding-left: 18px;
         padding-top: 24px;
         background-color: #F8F8F8;
     }
-    &__subtitle {
+    &_subtitle {
         color: #000;
         font-family: Lato;
         font-size: 13px;
@@ -172,7 +173,7 @@ summary {
         font-weight: 400;
         line-height: normal;
     }
-    &__desc {
+    &_desc {
         padding-top: 16px;
         padding-bottom: 16px;
         color: #5D5D5D;
@@ -182,7 +183,7 @@ summary {
         font-weight: 300;
         line-height: normal;
         }
-    &__price {
+    &_price {
         padding-bottom: 24px;
         color: $colorMain;
         font-family: Lato;
@@ -240,12 +241,12 @@ summary {
 }
 
 
-.catalog__product__items:hover .catalog__product__image {
+.catalog__product_items:hover .catalog__product_image {
     filter: brightness(0.5);
 
 }
 
-.catalog__product__items:hover .product__add {
+.catalog__product_items:hover .product__add {
     display: flex;
 }
 
@@ -291,15 +292,56 @@ summary {
         justify-content: space-between;
     }
 
-
     .catalog__product {
-
         grid-template-columns: repeat(2, 360px);
         gap: 16px;
         margin-bottom: 40px;
-    
+    }
+    .items-hidden {
+        display: none;
+
     }
 
+}
+
+
+/* Мобильная версия */
+    
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .mobil-head {
+        @include centerMobil;
+        background-color: #F8F3F4;
+        padding-top: 24px !important;
+        padding-bottom: 46px !important;
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .filter__sort {
+        @include centerMobil;
+        gap: 61.5px;
+        justify-content: space-between;
+    }
+
+    .filter__lists-svg {
+        width: 37.5px;
+        height: 25px;
+    }
+
+    .summary__text {
+        display: none;
+    }
+
+    .catalog__product {
+        grid-template-columns: repeat(1, 360px);
+        gap: 16px;
+        margin-bottom: 40px;
+    }
 
 }
 

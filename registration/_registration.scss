@@ -180,3 +180,38 @@
     }
 
 }
+
+
+
+/* Мобильная версия */
+    
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .registration {
+        margin-top: 40px;
+        @include centerMobil;
+        flex-direction: column;
+        gap: 39px;
+    }
+
+
+    .loyalty {
+        width: 360px;
+    
+        &__title {
+            font-size: 16px;
+        }
+    
+        &__text {
+            font-size: 16px;
+        }
+    
+        &__ul_list {
+            font-size: 16px;
+            padding-bottom: 26px;
+
+        }
+    
+    }
+
+}

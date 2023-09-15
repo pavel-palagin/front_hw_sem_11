@@ -14,22 +14,14 @@
     align-items: center;
     justify-content: space-between;
 
-    &__directory {
+    &_directory {
         color: $colorMain;
-        font-family: Lato;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        @include font-style400(24px);
     }
 
-    &__breadcrumbs__link {
+    &_breadcrumbs-link {
         color: #636363;
-        font-family: Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include font-style300(14px);
 
         &:not(:last-child)::after {
             padding: 0 5px;
@@ -37,11 +29,7 @@
         }
         &:last-child {
             color: $colorMain;
-            font-family: Lato;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
+            @include font-style700(14px);
         }
     }
 }
@@ -105,58 +93,48 @@
     margin-bottom: 130px;
     border: 1px solid #EAEAEA;
 
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 
     &__subtitle {
         margin-top: 64px;
         margin-bottom: 12px;
         color: $colorMain;
-        font-family: Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include font-style300(14px);
     }
 
-    &__subtitle__border {
+    &__subtitle_border {
         width: 63px;
         height: 3px;
         background-color: $colorMain;
         margin-bottom: 12px;
     }
 
-    &__string {
+    &_string {
         color: #4D4D4D;
-        font-family: Lato;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include font-style300(18px);
         margin-bottom: 48px;
     }
 
-    &__text {
+    &_text {
         width: 550px;
         color: #5E5E5E;
         text-align: center;
-        font-family: Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include font-style300(14px);
         margin-bottom: 32px;
     }
 
-    &__price {
+    &_price {
         color: $colorMain;
-        font-family: Lato;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include font-style300(24px);
         margin-bottom: 65px;
     }
 
-    &__line {
+    &_line {
         width: 650px;
         height: 1px;
         background-color: #EAEAEA;
@@ -171,7 +149,6 @@
 
     .details__summary {
         list-style: none;
-        
     }
 
     .arrow__list {
@@ -185,16 +162,18 @@
         border: 1px solid $colorMain;
         width: 200px;
         height: 50px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
+        @include font-style400(14px);
         align-items: center;
         justify-content: center;
         gap: 22px;
         color: $colorMain;
         margin-bottom: 64px;
     }
+}
+
+.details__summary{
+    color: #6F6E6E;
+    @include font-style400(14px);
 }
 
 
@@ -219,17 +198,77 @@
     }
 
     .items-hidden {
+        display: none;
 
     }
 
     .collection {
-        margin-top: 0px;
+        margin: 0 auto;
         z-index: 0;
     }
 
     .carousel__image-product {
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+
+}
+
+
+
+/* Мобильная версия */
+    
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .collection {
+        @include centerMobil;
+        margin: 0 auto;
+        z-index: 0;
+
+        &__description {
+            @include centerMobil;
+        }
+    
+        &_string {
+            margin-bottom: 32px;
+        }
+    
+        &_text {
+            width: 326px;
+        }
+    
+        &_price {
+            margin-bottom: 32px;
+        }
+    
+        &_line {
+            width: 175px;
+            margin-bottom: 49px;
+        }
+
+        &__sort {
+            margin-bottom: 64px;
+        }
+
+    }
+    
+    .details__summary{
+        font-size: 10px;
+    }
+    
+    .carousel__image-product {
+        margin-top: 85px;
+        margin-bottom: 85px;
+    }
+
+    .catalog__items-product {
+        margin-top: 64px;
+        grid-template-columns: repeat(1, 360px);
+        gap: 16px;
+    }
+
+    .items-hidden {
+        display: none;
     }
 
 }
