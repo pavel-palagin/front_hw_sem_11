@@ -81,39 +81,34 @@
             </div>
         </div>
 
-        <div id="carouselExample" class="carousel">
-            <button class="carousel__control__prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel__control__prev__icon" aria-hidden="true"></span>
-                <!-- <span class="visually-hidden">Previous</span> -->
-                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M47 0H0V47H47V0Z" fill="#2A2A2A" fill-opacity="0.15"></path>
-                <path class="arrow" d="M29.6998 15.7499L21.9498 23.4999L29.6998 31.2499L28.1498 34.3499L17.2998 23.4999L28.1498 12.6499L29.6998 15.7499Z" fill="black"></path>
-            </svg>
-            </button>
 
 
-            <div class="carousel__inner">
-                <div class="carousel__item">
-                <img src="../images/product/product_1.png" class="carousel__image__product" alt="product_1">
+            <div id="carouselExample" class="carousel slide">
+                <button class="carousel__control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M47 0H0V47H47V0Z" fill="#2A2A2A" fill-opacity="0.15"></path>
+                    <path class="arrow" d="M29.6998 15.7499L21.9498 23.4999L29.6998 31.2499L28.1498 34.3499L17.2998 23.4999L28.1498 12.6499L29.6998 15.7499Z" fill="black"></path>
+                </svg>
+                </button>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../images/product/product_1.png" class="carousel__image-product" alt="product_1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/product/product_1.png" class="carousel__image-product" alt="product_1">
+                  </div>
                 </div>
-                <div class="carousel-item">
-                <img src="../images/items/3.jpg" class="carousel__image__product" alt="product_1">
-                </div>
-                <div class="carousel-item">
-                <img src="../images/product/product_1.png" class="carousel__image__product" alt="product_1">
-                </div>
-            </div>
+                
 
-            <button class="carousel__control__next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel__control__next__icon" aria-hidden="true"></span>
-                <!-- <span class="visually__hidden">Next</span> -->
-                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M47 0H0V47H47V0Z" fill="#2A2A2A" fill-opacity="0.15"></path>
-                <path class="arrow" d="M17.2998 31.2499L25.0498 23.4999L17.2998 15.7499L18.8498 12.6499L29.6998 23.4999L18.8498 34.3499L17.2998 31.2499Z" fill="black"></path>
-            </svg>
-            </button>
+                <button class="carousel__control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M47 0H0V47H47V0Z" fill="#2A2A2A" fill-opacity="0.15"></path>
+                    <path class="arrow" d="M17.2998 31.2499L25.0498 23.4999L17.2998 15.7499L18.8498 12.6499L29.6998 23.4999L18.8498 34.3499L17.2998 31.2499Z" fill="black"></path>
+                </svg>
+                </button>
+              </div>
 
-            </div>
 
         <section class="collection">
             <h2 class="collection__subtitle">WOMEN COLLECTION</h2>
@@ -152,7 +147,7 @@
         </section>
 
 
-        <div class="catalog__items__product">
+        <div class="catalog__items-product">
             <div class="items">
                 <img src="../images/items/3.jpg" alt="" class="image">
                 <a href="#" class="product__add"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="items">
+            <div class="items items-hidden">
                 <img src="../images/items/6.jpg" alt="" class="image">
                 <a href="#" class="product__add"><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.9509 23.2667H21.8386C21.2294 23.2667 20.7177 22.7671 20.6735 22.1294C20.629 21.4607 21.1175 20.8785 21.7626 20.8346C21.788 20.8329 21.8145 20.832 21.8405 20.832C22.4575 20.832 22.9743 21.3219 23.0201 21.9487C23.0319 22.1971 22.9914 22.5514 22.736 22.8439L22.73 22.8507L22.7242 22.8575C22.5275 23.0912 22.2607 23.2321 21.9509 23.2667ZM8.21887 23.2604C7.5683 23.2604 7.03906 22.7174 7.03906 22.05C7.03906 21.3832 7.5683 20.8406 8.21887 20.8406C8.86945 20.8406 9.39868 21.3832 9.39868 22.05C9.39868 22.7174 8.86945 23.2604 8.21887 23.2604Z" fill="white"></path>
@@ -203,7 +198,7 @@
         </div>
 
         <section class="feedback">
-            <img src="../images/section_feedback/back.png" alt="" class="back__feedback">
+            <!-- <img src="../images/section_feedback/back.png" alt="" class="back__feedback"> -->
             <div class="content__feedback">
                 <div class="appeal">
                     <img class="appeal__foto" src="../images/section_feedback/foto.png" alt="foto">

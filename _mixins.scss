@@ -5,6 +5,14 @@
     padding-right: calc(50% - $widthContent/2);
 }
 
+@mixin centerTablet {
+    padding-left: calc(50% - $widthContentTablet/2);
+    padding-right: calc(50% - $widthContentTablet/2);
+}
+
+
+
+
 @mixin hidden {
     position: relative;
     overflow: hidden;

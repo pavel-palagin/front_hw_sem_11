@@ -1,4 +1,4 @@
-@import 'normalize';
+// @import 'normalize';
 @import 'mixins';
 @import 'fonts';
 @import 'animation';
@@ -221,7 +221,7 @@ img {
         position: relative;
         display: grid;
         justify-content: center;
-        min-height: 180px;
+        max-height: 180px;
         grid-column: 1 / -1;
     }
 }
@@ -367,7 +367,6 @@ img {
 
 .link__to__catalog {
     margin-top: 48px;
-    margin-bottom: 95px;
     text-align: center;
 }
 
@@ -392,7 +391,7 @@ img {
 
 
 .dignity {
-
+    margin-top: 96px;
     display: grid;
     grid-template-columns: repeat(3, 360px);
     gap: 30px;
@@ -400,6 +399,29 @@ img {
     background-color: #222224;;
     padding-top: 103px;
     padding-bottom: 103px;
+
+    &__subtitle {
+        margin-top: 20px;
+        color: #FBFBFB;
+        font-family: Lato;
+        font-size: 19.96px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    &__text {
+        width: 360px;
+        margin-top: 16px;
+        color: #FBFBFB;
+        text-align: center;
+        font-family: Lato;
+        font-size: 13.972px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
 
 }
 .value {
@@ -409,26 +431,7 @@ img {
     align-items: center;
 }
 
-.dignity__subtitle {
-    margin-top: 20px;
-    color: #FBFBFB;
-    font-family: Lato;
-    font-size: 19.96px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 
-.dignity__text {
-    margin-top: 16px;
-    color: #FBFBFB;
-    text-align: center;
-    font-family: Lato;
-    font-size: 13.972px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-}
 
 .feedback {
     background-image: url(/images/section_feedback/back.png);
@@ -613,11 +616,12 @@ img {
     }
     
     .catalog__range {
-        padding-bottom: 109px;
+        padding-bottom: 154px;
         gap: 20px;
         padding-left: calc(50% - 364px);
         padding-right: calc(50% - 364px);
     }
+
 
     .catalog__items {
         display: grid;
@@ -640,6 +644,7 @@ img {
     }
 
     .content__feedback {
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 48px;
     }
@@ -694,7 +699,7 @@ img {
     }
     
     .catalog__range {
-        padding-bottom: 109px;
+        padding-bottom: 64px;
         grid-template-columns: repeat(1, 1fr);
         gap: 32px;
         padding-left: calc(50% - 171px);
@@ -732,6 +737,7 @@ img {
     }
 
     .content__feedback {
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 59px;
     }

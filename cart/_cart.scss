@@ -107,6 +107,38 @@
 
 }
 
+.cart__action {
+    display: flex;
+    justify-content: center;
+    gap: 192px;
+    margin-top: 32px;
+    margin-bottom: 128px;
+    @include center;
+
+    &_btn {
+        width: 230px;
+        border: 1px solid rgba(164, 164, 164, 1);
+        padding-top: 15px;
+        padding-bottom: 16px;
+        color: #000;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 1);
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        transition: 0.5s;
+    }
+    
+    &_btn:hover {
+        background-color: $colorMain;
+        color: #FFF;
+        border: 1px solid $colorMain;
+    }
+
+}
+
 
 .cart__order {
     display: flex;
@@ -137,10 +169,21 @@
             gap: 20px;
 
             &_enter {
-                padding-top: 10px;
-                padding-bottom: 13px;
-                padding-left: 17px;
+                padding-top: 7px;
+                padding-bottom: 10px;
+                padding-left: 16px;
             }
+
+            &_enter::placeholder {
+                color: #B1B1B1;
+                font-family: Lato;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+
+              }
+
             &_link {
                 display: block;
                 padding-top: 10px;
@@ -174,6 +217,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+                margin-bottom: 12px;
             }
             &_grand {
                 color: #222;
@@ -182,11 +226,13 @@
                 font-style: normal;
                 font-weight: 300;
                 line-height: normal;
+                margin-bottom: 21px;
                 
             }
             &_hr {
                 width: 270px;
                 border: 1px solid #E2E2E2;
+                margin-bottom: 17px;
             }
             &_price {
                 color: $colorMain;
@@ -222,35 +268,45 @@
     }
     
 
-.cart__action {
-    display: flex;
-    gap: 192px;
-    margin-top: 72px;
-    margin-bottom: 128px;
-    @include center;
 
-    &_btn {
-        width: 230px;
-        border: 1px solid rgba(164, 164, 164, 1);
-        padding-top: 15px;
-        padding-bottom: 16px;
-        color: #000;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 1);
-        font-family: Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        transition: 0.5s;
-    }
+
+
+/* Планшетная версия */
     
-    &_btn:hover {
-        background-color: $colorMain;
-        color: #FFF;
-        border: 1px solid $colorMain;
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cart__content {
+        flex-direction: column;
+        @include centerTablet;
+        margin-bottom: 62px;
     }
 
+    .cart__action {
+        margin-top: 22px;
+        gap: 48px;
+        @include centerTablet;
+        margin-bottom: 64px;
+    }
+
+
+    .product_close {
+        padding-left: 84px;
+    }
+
+    .cart__order {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .order {
+        padding-top: 0;
+    }
+
+    .order__form {
+        gap: 15px;
+    }
 }
 
 
