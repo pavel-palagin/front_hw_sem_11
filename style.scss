@@ -60,6 +60,10 @@ img {
     gap: 30px;
 }
 
+.burger {
+    cursor: pointer !important;
+}
+
 
 .cart {
     display: flex;
@@ -366,6 +370,7 @@ img {
 
 
 .link__to__catalog {
+    display: block;
     margin-top: 48px;
     text-align: center;
 }
