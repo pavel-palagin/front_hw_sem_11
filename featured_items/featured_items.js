@@ -1,15 +1,15 @@
-function creatItem(dataJson) {
-  dataJson.forEach((item) => {
+function creatItem() {
+  JSON.parse(dataFeaturedItems).forEach((item) => {
     catalogItemsEl.insertAdjacentHTML(
       "beforeend",
-      getCart(item.subtitle, item.desc, item.price, item.img)
+      getCart(item.id, item.subtitle, item.desc, item.price, item.img)
     );
   });
 }
 
-function getCart(subtitle, desc, price, img) {
+function getCart(id, subtitle, desc, price, img) {
   return `
-  <div class="items">
+  <div class="items" id="${id}">
             <img src="${img}" alt="" class="image" />
             <a href="#" class="product__add"
               ><svg
@@ -43,5 +43,4 @@ function getCart(subtitle, desc, price, img) {
 }
 
 const catalogItemsEl = document.querySelector(".catalog__items");
-
-creatItem(JSON.parse(dataFeaturedItems));
+creatItem();

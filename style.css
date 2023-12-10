@@ -23,28 +23,12 @@
   font-weight: normal;
   font-style: normal;
 }
-@-webkit-keyframes scale-up-ver-center {
-  0% {
-    transform: scaleY(0.4);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
 @keyframes scale-up-ver-center {
   0% {
     transform: scaleY(0.4);
   }
   100% {
     transform: scaleY(1);
-  }
-}
-@-webkit-keyframes slide-fwd-center {
-  0% {
-    transform: translateZ(0);
-  }
-  100% {
-    transform: translateZ(160px);
   }
 }
 @keyframes slide-fwd-center {
@@ -540,8 +524,7 @@ summary::-webkit-details-marker {
   justify-content: center;
   gap: 11px;
   color: #FFFFFF;
-  -webkit-animation: scale-up-ver-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: scale-up-ver-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-ver-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .product__add:hover {
@@ -626,6 +609,7 @@ summary::-webkit-details-marker {
 }
 
 .product {
+  width: 652px;
   position: relative;
   display: flex;
   gap: 30px;
@@ -763,14 +747,6 @@ summary::-webkit-details-marker {
   padding-left: 16px;
 }
 .order__form_enter::-moz-placeholder {
-  color: #B1B1B1;
-  font-family: Lato;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-.order__form_enter:-ms-input-placeholder {
   color: #B1B1B1;
   font-family: Lato;
   font-size: 13px;
@@ -960,9 +936,6 @@ summary::-webkit-details-marker {
     margin-left: 15px;
   }
   .product__info_quantity::-moz-placeholder {
-    font-size: 10px;
-  }
-  .product__info_quantity:-ms-input-placeholder {
     font-size: 10px;
   }
   .product__info_quantity::placeholder {
@@ -1211,6 +1184,10 @@ img {
 .button {
   display: flex;
   gap: 30px;
+}
+
+.burger {
+  cursor: pointer !important;
 }
 
 .cart {
@@ -1465,8 +1442,7 @@ img {
   justify-content: center;
   gap: 11px;
   color: #FFFFFF;
-  -webkit-animation: scale-up-ver-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: scale-up-ver-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-ver-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .product__add:hover {
@@ -1514,6 +1490,7 @@ img {
 }
 
 .link__to__catalog {
+  display: block;
   margin-top: 48px;
   text-align: center;
 }
